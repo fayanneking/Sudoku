@@ -44,4 +44,16 @@ public class Sudoku extends Activity implements View.OnClickListener{
     	inflater.inflate(R.menu.menu, menu);
     	return true;
     }
+    
+
+     @Override
+     public boolean onOptionsItemSelected(MenuItem item) {
+     	switch (item.getItemId()) {
+     		case R.id.settings:
+     			startActivity(new Intent(this, Settings.class));
+     			return true;
+     	}
+     	return false;
+     }
+     
 }
